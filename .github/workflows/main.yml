@@ -1,4 +1,4 @@
-name: Enforce Branch Naming Convention
+name: Validate Branch and Commit Message
 
 on:
   push:
@@ -6,18 +6,33 @@ on:
       - "*"
 
 jobs:
-  check-branch-name:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Check branch name
         run: |
           BRANCH_NAME=$(echo "${{ github.ref }}" | sed 's/refs\/heads\///')
-          echo "Branch name: $BRANCH_NAME"
+          echo "Checking branch name: '$BRANCH_NAME'"
           if [[ "$BRANCH_NAME" == "official" || "$BRANCH_NAME" == "dev" ]]; then
             echo "Skipping branch naming check for '$BRANCH_NAME'."
-            exit 0
+          else
+            # Regex pattern for 'dev1:' to 'dev100:' followed by any message
+            if ! [[ "$BRANCH_NAME" =~ ^dev([1-9]|[1-9][0-9]|100)-[a-zA-Z0-9._-]+:[[:space:]]?.+$ ]]; then
+              echo "Error: Branch name '$BRANCH_NAME' does not follow the naming convention."
+              echo "Branch names must follow the pattern: 'dev1-<description>: <any message>' up to 'dev100-<description>: <any message>'."
+              exit 1
+            fi
           fi
-          if ! [[ "$BRANCH_NAME" =~ ^(feature|bugfix|hotfix|release)\/[a-zA-Z0-9._-]+$ ]]; then
-            echo "Branch name '$BRANCH_NAME' does not follow the naming convention."
+
+      - name: Lint commit messages
+        run: |
+          # Regex pattern to enforce 'dev1:' to 'dev100:' followed by any message
+          regex="^dev([1-9]|[1-9][0-9]|100):[[:space:]]?.+"
+          git log -1 --pretty=format:%s > last_commit_message.txt
+          COMMIT_MESSAGE=$(cat last_commit_message.txt)
+          echo "Checking commit message: '$COMMIT_MESSAGE'"
+          if ! [[ "$COMMIT_MESSAGE" =~ $regex ]]; then
+            echo "Error: Commit message does not follow the pattern."
+            echo "Commit messages must start with 'dev1:' to 'dev100:' followed by any message."
             exit 1
           fi
