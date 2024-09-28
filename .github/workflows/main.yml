@@ -36,11 +36,17 @@ jobs:
 
       - name: Lint commit messages
         run: |
+          # Get the last commit message from the source branch if it's a pull request
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            COMMIT_MESSAGE=$(git log --format=%B -n 1 ${{ github.event.pull_request.head.sha }})
+          else
+            COMMIT_MESSAGE=$(git log -1 --pretty=format:%s)
+          fi
+
+          echo "Checking commit message: '$COMMIT_MESSAGE'"
+
           # Regex pattern to enforce 'dev1:' to 'dev100:' followed by any message
           regex="^dev([1-9]|[1-9][0-9]|100):[[:space:]]?.+"
-          git log -1 --pretty=format:%s > last_commit_message.txt
-          COMMIT_MESSAGE=$(cat last_commit_message.txt)
-          echo "Checking commit message: '$COMMIT_MESSAGE'"
           if ! [[ "$COMMIT_MESSAGE" =~ $regex ]]; then
             echo "Error: Commit message does not follow the pattern."
             echo "Commit messages must start with 'dev1:' to 'dev100:' followed by any message."
