@@ -82,7 +82,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: #F5F5DC;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -125,18 +125,18 @@ global styles
 */
 html,
 body {
-  background: #fff;
+  background: #F5F5DC;
   font-family: 'Poppins', sans-serif;
 }
 
 ::selection {
   background: #f5a425;
-  color: #fff;
+  color: #F5F5DC;
 }
 
 ::-moz-selection {
   background: #f5a425;
-  color: #fff;
+  color: #F5F5DC;
 }
 
 @media (max-width: 991px) {
@@ -157,7 +157,7 @@ body {
 
 .main-button-red a {
   font-size: 13px;
-  color: #fff;
+  color: #F5F5DC;
   background-color: #a12c2f;
   padding: 12px 30px;
   display: inline-block;
@@ -173,7 +173,7 @@ body {
 
 .main-button-yellow a {
   font-size: 13px;
-  color: #fff;
+  color: #F5F5DC;
   background-color: #f5a425;
   padding: 12px 30px;
   display: inline-block;
@@ -196,7 +196,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: #F5F5DC;
 }
 
 
@@ -213,7 +213,7 @@ header
 }
 
 .sub-header .left-content p {
-  color: #fff;
+  color: #F5F5DC;
   padding: 8px 0px;
   font-size: 13px;
 }
@@ -229,7 +229,7 @@ header
 }
 
 .sub-header .right-icons ul li a {
-  color: #fff;
+  color: #F5F5DC;
   font-size: 14px;
   transition: all .3s;
 }
@@ -244,7 +244,7 @@ header
 }
 
 .background-header {
-  background-color: #fff!important;
+  background-color: #F5F5DC!important;
   height: 80px!important;
   position: fixed!important;
   top: 0!important;
@@ -271,7 +271,7 @@ header
 }
 
 .header-area {
-  background-color: rgba(250,250,250,0.15);
+  background-color: rgba(250, 250, 250, 0);
   position: absolute;
   top: 40px;
   left: 0;
@@ -290,7 +290,7 @@ header
 
 .header-area .main-nav .logo {
   line-height: 100px;
-  color: #fff;
+  color: #F5F5DC;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -337,7 +337,7 @@ header
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-  color: #fff;
+  color: #F5F5DC;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -368,7 +368,7 @@ header
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
-  color: #fff;
+  color: #F5F5DC;
   position: absolute;
   right: 5px;
   top: 12px;
@@ -416,7 +416,7 @@ header
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  background: #fff;
+  background: #F5F5DC;
   color: #f5a425!important;
   padding-left: 25px;
 }
@@ -619,7 +619,7 @@ header
   }
   .header-area .main-nav .nav li {
     width: 100%;
-    background: #fff;
+    background: #F5F5DC;
     border-bottom: 1px solid #eee;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -723,7 +723,7 @@ banner
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #fff;
+  color: #F5F5DC;
   letter-spacing: 1px;
 }
 
@@ -733,7 +733,7 @@ banner
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 800;
-  color: #fff;
+  color: #F5F5DC;
   letter-spacing: 1px;
 }
 
@@ -744,7 +744,7 @@ banner
 }
 
 .main-banner .caption p {
-  color: #fff;
+  color: #F5F5DC;
   font-size: 14px;
   max-width: 570px;
 }
@@ -785,7 +785,7 @@ services
   background-position: center center;
   border-radius: 20px;
   text-align: center;
-  color: #fff;
+  color: #F5F5DC;
   padding: 40px;
 }
 
@@ -802,7 +802,7 @@ services
 }
 
 .services .item p {
-  color: #fff;
+  color: #F5F5DC;
   font-size: 13px;
 }
 
@@ -834,7 +834,7 @@ services
   font-size: 25px;
   font-weight: 700;
   content: '\f104';
-  background-color: #fff;
+  background-color: #F5F5DC;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -873,7 +873,7 @@ services
   font-size: 25px;
   font-weight: 700;
   content: '\f105';
-  background-color: #fff;
+  background-color: #F5F5DC;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -902,7 +902,7 @@ section.upcoming-meetings .section-heading {
 }
 
 section.upcoming-meetings .categories {
-  background-color: #fff;
+  background-color: #F5F5DC;
   border-radius: 20px;
   padding: 40px;
   margin-right: 45px;
@@ -973,7 +973,7 @@ section.upcoming-meetings .categories .main-button-red a {
 }
 
 .meeting-item .down-content {
-  background-color: #fff;
+  background-color: #F5F5DC;
   padding: 30px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1038,7 +1038,7 @@ section.apply-now .item {
 }
 
 section.apply-now .item h3 {
-  color: #fff;
+  color: #F5F5DC;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
@@ -1046,14 +1046,14 @@ section.apply-now .item h3 {
 }
 
 section.apply-now .item p {
-  color: #fff;
+  color: #F5F5DC;
   margin-bottom: 20px;
 }
 
 .accordions {
   border-radius: 20px;
   padding: 40px;
-  background-color: #fff;
+  background-color: #F5F5DC;
   margin-left: 45px;
 }
 .accordions .accordion {
@@ -1069,7 +1069,7 @@ section.apply-now .item p {
   color: #1f272b;
   cursor: pointer;
   transition: color 200ms ease-in-out;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #F5F5DC;
 }
 @media screen and (min-width: 768px) {
   .accordion-head {
@@ -1092,7 +1092,7 @@ section.apply-now .item p {
   overflow: hidden;
   height: 0;
   transition: height 300ms ease-in-out;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #F5F5DC;
 }
 .accordion-body > .content {
   padding: 20px;
@@ -1117,7 +1117,7 @@ section.our-courses {
 }
 
 .our-courses .item .down-content {
-  background-color: #fff;
+  background-color: #F5F5DC;
 }
 
 .our-courses .item .down-content h4 {
@@ -1170,7 +1170,7 @@ section.our-courses {
   transition: all .5s;
   width: 7px;
   height: 7px;
-  background-color: #fff;
+  background-color: #F5F5DC;
   margin: 0px 5px;
   border-radius: 50%;
   outline: none;
@@ -1201,7 +1201,7 @@ section.our-courses {
   font-size: 25px;
   font-weight: 700;
   content: '\f104';
-  background-color: #fff;
+  background-color: #F5F5DC;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1240,7 +1240,7 @@ section.our-courses {
   font-size: 25px;
   font-weight: 700;
   content: '\f105';
-  background-color: #fff;
+  background-color: #F5F5DC;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1265,7 +1265,7 @@ section.our-facts {
 
 section.our-facts h2 {
   font-size: 38px;
-  color: #fff;
+  color: #F5F5DC;
   line-height: 50px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -1294,7 +1294,7 @@ section.our-facts h2 {
 .count-title {
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: #F5F5DC;
     letter-spacing: 0.5px;
 }
 
@@ -1334,7 +1334,7 @@ section.contact-us {
 }
 
 section.contact-us #contact {
-  background-color: #fff;
+  background-color: #F5F5DC;
   border-radius: 20px;
   padding: 40px;
 }
@@ -1382,7 +1382,7 @@ section.contact-us #contact textarea {
 
 section.contact-us #contact button {
   font-size: 13px;
-  color: #fff;
+  color: #F5F5DC;
   background-color: #a12c2f;
   padding: 12px 30px;
   display: inline-block;
@@ -1418,7 +1418,7 @@ section.contact-us .right-info ul li:last-child {
 }
 
 section.contact-us .right-info ul li h6 {
-  color: #fff;
+  color: #F5F5DC;
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -1427,7 +1427,7 @@ section.contact-us .right-info ul li h6 {
 section.contact-us .right-info ul li span {
   display: block;
   font-size: 18px;
-  color: #fff;
+  color: #F5F5DC;
   font-weight: 700;
 }
 
@@ -1440,7 +1440,7 @@ section.contact-us .right-info ul li span {
 .footer p {
   text-transform: uppercase;
   font-size: 14px;
-  color: #fff;
+  color: #F5F5DC;
 }
 
 .footer p a {
@@ -1469,7 +1469,7 @@ section.heading-page h6 {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #fff;
+  color: #F5F5DC;
   letter-spacing: 1px;
 }
 
@@ -1479,7 +1479,7 @@ section.heading-page h2 {
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 800;
-  color: #fff;
+  color: #F5F5DC;
   letter-spacing: 1px;
 }
 
@@ -1508,7 +1508,7 @@ section.meetings-page .filters {
 section.meetings-page .filters li {
   font-size: 13px;
   color: #a12c2f;
-  background-color: #fff;
+  background-color: #F5F5DC;
   padding: 11px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -1522,7 +1522,7 @@ section.meetings-page .filters li {
 section.meetings-page .filters ul li.active,
 section.meetings-page .filters ul li:hover {
   background-color: #a12c2f;
-  color: #fff;
+  color: #F5F5DC;
 }
 
 section.meetings-page .pagination {
@@ -1539,7 +1539,7 @@ section.meetings-page .pagination ul li {
 section.meetings-page .pagination ul li a {
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: #F5F5DC;
   border-radius: 10px;
   color: #1f272b;
   display: inline-block;
@@ -1563,7 +1563,7 @@ section.meetings-page .main-button-red a {
 section.meetings-page .pagination ul li.active a,
 section.meetings-page .pagination ul li a:hover {
   background-color: #a12c2f;
-  color: #fff;
+  color: #F5F5DC;
 }
 
 .meeting-single-item .thumb {
@@ -1591,7 +1591,7 @@ section.meetings-page .pagination ul li a:hover {
 }
 
 .meeting-single-item .down-content {
-  background-color: #fff;
+  background-color: #F5F5DC;
   padding: 40px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
