@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - "*"
+  pull_request:
+    branches:
+      - "*"
 
 jobs:
   validate:
@@ -17,7 +20,7 @@ jobs:
             echo "Skipping branch naming check for '$BRANCH_NAME'."
           else
             # Regex pattern for 'dev1:' to 'dev100:' followed by any message
-            if ! [[ "$BRANCH_NAME" =~ ^dev([1-9]|[1-9][0-9]|100)-[a-zA-Z0-9._-]+:[[:space:]]?.+$ ]]; then
+            if ! [[ "$BRANCH_NAME" =~ ^(feature|bugfix|hotfix|release)\/[a-zA-Z0-9._-]+$ ]]; then
               echo "Error: Branch name '$BRANCH_NAME' does not follow the naming convention."
               echo "Branch names must follow the pattern: 'dev1-<description>: <any message>' up to 'dev100-<description>: <any message>'."
               exit 1
