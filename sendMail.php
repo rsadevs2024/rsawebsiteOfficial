@@ -9,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Recipient email
-    $to = 'christianex.cadevida@gmail.com'; // Change to your email address
+    $to = 'your-email@example.com'; // Change to your email address
 
     // Subject
-    $subject = 'New Appointment Request:' . $service;
+    $subject = 'New Appointment Request';
 
     // Email content
     $body = "Name: $name\nEmail: $email\nDate: $date\nTime: $time\nService: $service\nPhone: $phone\nMessage: $message";
@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
-        echo "Email sent successfully!";
+        echo "Your appointment request has been sent successfully!";
     } else {
-        echo "Email sending failed.";
+        echo "There was an error sending your appointment request.";
     }
 } else {
     echo "Invalid request.";

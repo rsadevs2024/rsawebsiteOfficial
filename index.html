@@ -392,7 +392,7 @@
         <h3 class="vr">Call Us: 012-3456-7890</h3>
     		<div class="row justify-content-center">
     			<div class="col-md-10 ftco-animate">
-    				<form action="sendMail.php" class="appointment-form" method="POST">
+    				<form action="sendMail.php" class="appointment-form" method="POST" id="appointment-form">
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="form-group">
@@ -441,6 +441,8 @@
 						<div class="form-group">
 							<input type="submit" value="Make an Appointment" class="btn btn-primary">
 						</div>
+						<div id="alert-placeholder"></div> <!-- Placeholder for Bootstrap alert -->
+               
 	          </form>
     			</div>
     		</div>
@@ -883,5 +885,49 @@
         $('#carouselExample').carousel('next'); // Change 'carouselExample' to your carousel ID
     }, 5000); // 5000 milliseconds = 5 seconds
 </script>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#appointment-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            var formData = $(this).serialize();
+
+            // AJAX request
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'), // Send to the action URL of the form
+                data: formData,
+                success: function(response) {
+                    // Show success alert
+                    $('#alert-placeholder').html(`
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            ${response}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    `);
+                    $('#appointment-form')[0].reset(); // Reset the form
+                },
+                error: function() {
+                    // Show error alert
+                    $('#alert-placeholder').html(`
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            There was an error sending your appointment request. Please try again later.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    `);
+                }
+            });
+        });
+    });
+</script>
+
   </body>
 </html>
