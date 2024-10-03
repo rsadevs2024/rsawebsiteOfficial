@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = htmlspecialchars($_POST['appointment_date']);
     $time = htmlspecialchars($_POST['appointment_time']);
     $service = htmlspecialchars($_POST['service']);
+    $branch = htmlspecialchars($_POST['branch']);
     $phone = htmlspecialchars($_POST['phone']);
     $message = htmlspecialchars($_POST['message']);
 
@@ -12,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = 'christianex.cadevida@gmail.com'; // Change to your email address
 
     // Subject
-    $subject = 'New Appointment Request';
+    $subject = 'New Appointment Request:'.$branch;
 
     // Email content
     $body = "You have received a new appointment request.\n\n" .
@@ -24,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "Date: $date\n" .
         "Time: $time\n" .
         "Service: $service\n" .
+        Service: $branch\n" .
         "Message: $message\n" .
         "-------------------------------------\n" .
         "Please respond to this request at your earliest convenience.\n\n" .
