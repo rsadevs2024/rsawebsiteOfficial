@@ -58,3 +58,14 @@
     text-align: center;
     /* Center the content */
 }
+
+.carousel-indicators li {
+    background-color: black !important;
+
+    /* Change the color of the indicators */
+}
+
+.carousel-indicators .active {
+    background-color: gold !important;
+    /* Change the color of the active indicator */
+}
