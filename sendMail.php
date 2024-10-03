@@ -9,13 +9,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Recipient email
-    $to = 'your-email@example.com'; // Change to your email address
+    $to = 'christianex.cadevida@gmail.com'; // Change to your email address
 
     // Subject
     $subject = 'New Appointment Request';
 
     // Email content
-    $body = "Name: $name\nEmail: $email\nDate: $date\nTime: $time\nService: $service\nPhone: $phone\nMessage: $message";
+    $body = "You have received a new appointment request.\n\n" .
+        "Details:\n" .
+        "-------------------------------------\n" .
+        "Name: $name\n" .
+        "Email: $email\n" .
+        "Phone: $phone\n" .
+        "Date: $date\n" .
+        "Time: $time\n" .
+        "Service: $service\n" .
+        "Message: $message\n" .
+        "-------------------------------------\n" .
+        "Please respond to this request at your earliest convenience.\n\n" .
+        "Best regards,\n" .
+        "Your Royale Skin Aesthetics Team";
 
     // Headers
     $headers = "From: $name <$email>";
