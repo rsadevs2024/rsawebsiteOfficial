@@ -1,3 +1,13 @@
+.video-wrapper,
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Adjust height as needed */
+    overflow: hidden;
+    /* Prevents overflow */
+}
+
 .video-background {
     position: absolute;
     top: 50%;
@@ -6,9 +16,18 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
+    z-index: 0;
     /* Places the video behind other elements */
     transform: translate(-50%, -50%);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the area */
+    z-index: 0;
+    /* Places the image behind other elements */
 }
 
 .overlay {
@@ -17,20 +36,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    /* Adjust this value for dimming effect */
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust for dimming effect */
     z-index: 1;
-    /* Ensure overlay is above the video */
+    /* Ensure overlay is above the video/image */
 }
 
-.container {
-    position: relative;
-    /* Ensure container is positioned above overlay */
+.container-home {
+    position: absolute;
+    /* Change to absolute positioning */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Centering transform */
     z-index: 2;
-    /* Make sure the container and its content are above the overlay */
-}
-
-.text {
+    /* Ensure this is above the overlay */
     color: white;
     /* Change text color for better visibility */
     text-align: center;

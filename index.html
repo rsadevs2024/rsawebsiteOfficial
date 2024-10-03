@@ -4,7 +4,9 @@
     <title>Royale Skin Aesthetics Corp - Official Website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+	<link rel="stylesheet" href="css/rsacustom.css">
+	
+  
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500,600,700&display=swap" rel="stylesheet">
 
@@ -26,7 +28,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/rsacustom.css">
+   
+	
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="padding-top:50px;padding-bottom: 50px;">
@@ -52,25 +55,59 @@
 	  </nav>
     <!-- END nav -->
 
-	<section class="hero-wrap js-fullheight" style="position: relative; overflow: hidden;">
-		<video autoplay muted loop class="video-background" playsinline>
-			<source src="images/video/ads.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-		
-		<div class="overlay"></div>
-		<div class="container" style="position: relative; z-index: 2;">
-			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-				<div class="col-lg-12 ftco-animate d-flex align-items-center">
-					<div class="text text-center">
-						<span class="subheading">Welcome to Royale Skin Aesthetics Corporation</span>
-						<h1 class="mb-4">Skincare starts with Skincare</h1>
-						<p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
+	<section id="hero-carousel" class="hero-wrap js-fullheight">
+		<div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="video-wrapper">
+						<video autoplay muted loop class="video-background">
+							<source src="images/video/ads.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<div class="overlay"></div>
+					</div>
+					<div class="container-home">
+						<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+							<div class="col-lg-12 ftco-animate d-flex align-items-center">
+								<div class="text text-center">
+									<span class="subheading">Welcome to Royale Skin Aesthetics Corporation</span>
+									<h1 class="mb-4">Skincare starts with Skincare</h1>
+									<p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="carousel-item">
+					<div class="image-wrapper">
+						<img src="images/bg-1.jpg" class="d-block w-100" alt="Your Alt Text">
+						<div class="overlay"></div>
+					</div>
+					<div class="container-home">
+						<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+							<div class="col-lg-12 ftco-animate d-flex align-items-center">
+								<div class="text text-center">
+									<span class="subheading">Experience Our Treatments</span>
+									<h1 class="mb-4">Transform Your Skin</h1>
+									<p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-2">Learn More</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Add more slides as needed -->
 			</div>
+			<a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 	</section>
+	
 		
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container-fluid px-0">
@@ -834,6 +871,17 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
      <script src="//code.tidio.co/mbrslri2n30mo2daod5jf4aztaunwjay.js" async></script>
+	 <!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+
+<script>
+    // Automatically switch to the next carousel item every 5 seconds
+    setInterval(function() {
+        $('#carouselExample').carousel('next'); // Change 'carouselExample' to your carousel ID
+    }, 5000); // 5000 milliseconds = 5 seconds
+</script>
   </body>
 </html>
