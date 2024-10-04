@@ -69,3 +69,6 @@
     background-color: gold !important;
     /* Change the color of the active indicator */
 }
+.icon-space {
+    margin-right: 4px; /* Adjust the value as needed */
+}
