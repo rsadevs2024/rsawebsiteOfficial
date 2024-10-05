@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Recipient email
-    $to = 'christianex.cadevida@gmail.com'; // Change to your email address
+    $to = 'royaleskinaesthetics.official@gmail.com'; // Change to your email address
 
     // Subject
     $subject = 'New Appointment Request:' . $branch;
