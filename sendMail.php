@@ -15,7 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $to = 'royaleskinaesthetics.official@gmail.com'; // Change to your email address
 
         // Subject
-        $subject = 'New Appointment Request:' . $branch;
+        $uuid = substr(bin2hex(random_bytes(3)), 0, 5);
+
+        $subject = 'New Appointment Request:' . $branch . ' #' . $uuid;
 
         // Email content
         $body = "You have received a new appointment request.\n\n" .
