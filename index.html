@@ -47,7 +47,7 @@
 				<span class="oi oi-menu"></span> Menu
 			</button>
 
-			<div class="collapse navbar-collapse" id="ftco-nav" style="margin-top:50px; text-align: center;">
+			<div class="collapse navbar-collapse" id="ftco-nav" style=" text-align: center;">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
@@ -61,7 +61,7 @@
 	</nav>
 	<!-- END nav -->
 
-	<section id="hero-carousel" class="hero-wrap js-fullheight">
+	<section id="hero-carousel" class="hero-wrap">
 		<div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -1182,7 +1182,7 @@
 		</div>
 	</section>
 
-	<footer class="ftco-footer ftco-section">
+	<footer class="ftco-footer ftco-section" style=" color:beige !important">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-md">
@@ -1243,7 +1243,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style=" color:beige !important">
 				<div class="col-md-12 text-center">
 					Social Media Links
 					<ul class="ftco-footer-social list-unstyled">
@@ -1265,20 +1265,21 @@
 			</div>
 
 		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
 
-	</footer>
-	<div class="row" style="background-color: beige;padding-top: 1%; color:darkgoldenrod">
-		<div class="col-md-12 text-center">
-
-			<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;
-				<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-				was originally created with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-					href="https://colorlib.com" target="_blank">Colorlib and has been modified.</a>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			</p>
+				<p style=" color:beige !important">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+					was originally created with <i class="icon-heart color-danger" aria-hidden="true"></i> by
+					Colorlib and has been modified.
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
 		</div>
-	</div>
+	</footer>
+
 
 
 	<!-- loader -->
@@ -1320,46 +1321,7 @@
 
 	< <!-- jQuery and Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script>
-			$(document).ready(function () {
-				$('#appointment-form').on('submit', function (e) {
-					e.preventDefault(); // Prevent the default form submission
-
-					// Get form data
-					var formData = $(this).serialize();
-
-					// AJAX request
-					$.ajax({
-						type: 'POST',
-						url: $(this).attr('action'), // Send to the action URL of the form
-						data: formData,
-						success: function (response) {
-							// Show success alert
-							$('#alert-placeholder').html(`
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            ${response}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    `);
-							$('#appointment-form')[0].reset(); // Reset the form
-						},
-						error: function () {
-							// Show error alert
-							$('#alert-placeholder').html(`
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            There was an error sending your appointment request. Please try again later.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    `);
-						}
-					});
-				});
-			});
-		</script>
+		<script src="js/rsa-custom.js"></script>
 
 </body>
 
