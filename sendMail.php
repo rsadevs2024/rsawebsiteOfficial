@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Subject
         $uuid = substr(bin2hex(random_bytes(3)), 0, 5);
 
-        $subject = 'New Appointment Request:' . $branch . ' #' . $uuid;
+        $subject = 'Appointment Request #' . $uuid;
 
         // Email content
         $body = "You have received a new appointment request.\n\n" .
