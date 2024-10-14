@@ -12740,11 +12740,13 @@ h3.vr {
 
 .services-wrap {
   width: 100%;
+
 }
 
 .services-wrap.img {
   position: relative;
   z-index: 0;
+  
 }
 
 @media (max-width: 767.98px) {
@@ -12761,7 +12763,7 @@ h3.vr {
   right: 50px;
   bottom: 50px;
   content: '';
-  border: 3px solid #bf925b;
+  border: none;
   z-index: -1;
 }
 
