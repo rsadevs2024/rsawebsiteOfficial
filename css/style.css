@@ -12100,6 +12100,13 @@ h5,
 }
 
 .slider-text .subheading {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bf925b;
+  letter-spacing: 2px;
+}
+.slider-text .subheading2 {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
