@@ -3,6 +3,8 @@
 
 <head>
     <title>Royale Skin Aesthetics Corp - Branches</title>
+    <meta name="msapplication-TileImage" content="images/icon.svg" />
+    <link rel="shortcut icon" type="x-icon" href="images/icon.svg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -58,21 +60,20 @@
         </div>
     </nav>
     <!-- END nav -->
-
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg-1.jpg');"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-                <div class="col-md-9 ftco-animate pb-5 text-center">
-                    <h2 class="mb-0 bread">our Branches</h2>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                                    class="ion-ios-arrow-round-forward"></i></a></span> <span>Branch <i
-                                class="ion-ios-arrow-round-forward"></i></span></p>
-                </div>
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/services/Header.jpeg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+                <h2 class="mb-0 bread">our Branches</h2>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                                class="ion-ios-arrow-round-forward"></i></a></span> <span>Branch <i
+                            class="ion-ios-arrow-round-forward"></i></span></p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="ftco-section ftco-degree-bg">
 
@@ -415,7 +416,10 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
                 stroke="#F96D00" />
         </svg></div>
-
+        <script>
+            const marqueeText = document.querySelector('.marquee');
+            marqueeText.setAttribute('data-text', marqueeText.textContent);
+            </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
